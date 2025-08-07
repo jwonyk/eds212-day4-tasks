@@ -1,0 +1,12 @@
+---
+title: "Data Exploration & Summarizing in R"
+author: "J"
+format: html
+editor: visual
+---
+
+## Explore!
+```{r}
+
+```
+

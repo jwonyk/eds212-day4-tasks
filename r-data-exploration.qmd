@@ -3,10 +3,51 @@ title: "Data Exploration & Summarizing in R"
 author: "J"
 format: html
 editor: visual
+editor_options: 
+  chunk_output_type: console
 ---
 
 ## Explore!
 ```{r}
+
+# Libraries
+library(GGally)
+library(skimr)
+library(tidyverse)
+
+View(diamonds)
+
+# Check the column names
+names(diamonds)
+
+# Check dimensions of data frame
+dim(diamonds)
+
+# Get a summary of the data
+summary(diamonds)
+
+# Get a summary with {skimr}
+skimr::skim(diamonds)
+
+# Print the first 6 rows
+head(diamonds)
+
+# Print the last 6 rows
+tail(diamonds) 
+
+# Make a pairplot
+GGally::ggpairs(diamonds)
+
+# Make a basic scatterplot
+ggplot(data = diamonds, aes(x = price, y = carat)) +
+  geom_point()
+
+# Make a histogram of penguin flipper lengths ----
+ggplot(data = diamonds, aes(x = carat)) +
+  geom_histogram()
+
+ggplot(data = diamonds, aes(x = carat, y = price)) +
+  geom_boxplot()
 
 ```
 
